@@ -1,0 +1,354 @@
+/* 
+    Document   : styles.css
+    Created on : 14/09/2012
+    Author     : John Arley Cano
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+@charset "utf-8";
+
+body {
+    font-family:Tahoma;
+    color: #000000;
+    font-weight:bold;
+    background: #F2FBE3 url(../img/fondo.PNG) repeat-x top center;
+    font-size: 12px;
+}
+
+/* -------------------------------------Estilos de logo y titulo ---------------------------------------------------- */
+#logo{
+    background: url(../img/logo.png) no-repeat;
+    width:250px;
+    height:90px;
+    float:left;
+    margin: 10px;
+}
+
+#titulo_usuario{
+    margin-top: 10px;
+    font-size: 20px;
+    text-align: center;
+}/* -------------------------------------Fin Estilos de logo y titulo ---------------------------------------------------- */
+
+#contenido{
+    background: #FFFFFF;
+    position: relative;
+    height:auto;
+    border-radius: 10px 10px 10px 10px;
+    min-width: 30em;
+    min-height: 160px;
+    padding: 1.5em;
+    box-shadow: 0 6px 12px rgba(0,0,0,.25);
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.25);
+    -moz-box-shadow: 0 6px 12px rgba(0,0,0,.25); 
+}
+
+.titulo_general {
+    background:#2D2823 !important;
+    border-radius: 5px 5px 5px 5px !important;
+    box-shadow: 0 6px 12px rgba(0,0,0,.25) !important;
+    padding: 5px 10px 5px 10px !important;
+    margin-bottom: 15px !important;
+    color: #ffffff !important;
+}
+
+/*-----Estilo del pie de pagina---*/
+#footer{
+    margin: 10px;
+    color:#000000;
+    font-size: 12px;
+}
+
+.clear{
+    clear:both;
+}
+
+/* -------------------------------------Estilo de la barra de menu---------------------------------------------------- */
+/*left define el menú a la izquiera*/
+#menu-left{
+    width:5px; 
+    height:3px; 
+    float:left;
+}
+
+/*Define el menú a la derecha*/
+#menu-right{
+    width:4px; 
+    height:33px; 
+    float:left;
+}
+
+/*Define las características de la barra de menu*/
+#menu {
+    width:690px; 
+    height:45px;
+    background:#2D2823; 
+    float:left;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 6px 12px rgba(0,0,0,.25);
+}
+
+/*Define*/
+#menu ul {
+    margin:0px; 
+    padding:0px; 
+    list-style:none;
+    z-index:10;
+    position:absolute;
+}
+
+/*Define cada una de las opciones del menú principal*/
+#menu ul li { 
+    float:left; 
+    position: relative; 
+    width:120px; 
+    text-align:center; 
+    margin:0px;
+}
+
+#menu ul li ul { 
+    display:none ;
+}
+
+/*Define la fuente de las opciones del menú principal*/
+#menu ul li a { 
+    font-family:Tahoma;
+    text-decoration:none;
+    color:#FFFFFF; 
+    display:block; 
+    font-size:14px; 
+    font-weight:bold;
+    margin-top: 5px;
+}
+
+/*Define la sombra de las opciones del menú principal*/
+#menu ul li a span {
+    display:block; 
+    height:40px; 
+    line-height:33px;
+}
+
+#menu ul li a:hover {
+    color:#e8fffa; 
+    font-weight:bold;
+}
+    
+/*Define*/
+#menu ul li.selected { 
+    color:red; 
+    font-weight:bold; 
+    -moz-box-shadow:2px 2px 5px #d6d6d6; 
+    -webkit-box-shadow:2px 2px 5px #d6d6d6; 
+    box-shadow:2px 2px 5px #d6d6d6; 
+}
+
+/*Define el color que obtendrá al poner el cursos sobre cada opcion principal*/
+#menu ul li.selected a { 
+    color:#FFD966;
+} 
+
+/*Define cada opcion del submenú*/
+#menu ul li ul.menuDrpDwn, #menu ul li ul.menuDrpDwn ul { 
+    position:absolute; 
+    left:0; top:45px; 
+    background-color:#fefefe; 
+    border: solid 1px #c8c8c8; 
+    width:150px; 
+    -moz-box-shadow:2px 2px 5px #d6d6d6; 
+    -webkit-box-shadow:2px 2px 5px #d6d6d6; 
+    box-shadow:2px 2px 5px #d6d6d6;
+}
+
+/*Define las opciones desplegadas de los submenu(Nivel 3)*/
+#menu ul li ul.menuDrpDwn li, #menu ul li ul.menuDrpDwn ul li{
+    text-align:left; 
+    float:none; 
+    display:block; 
+    width:150px;}
+
+/*Define la fuente para el submenu (nivel 2)*/
+#menu ul li ul.menuDrpDwn li a { 
+    font:normal 11px Tahoma, Arial, Helvetica, sans-serif; 
+    color:#767676; 
+    display:block; 
+    height:25px; 
+    line-height:25px; 
+    display:block; 
+    text-indent:15px;
+}
+
+/*Define el color que tendra cada opcion del submenu al pasar el mouse*/
+#menu ul li ul.menuDrpDwn li a:hover { 
+    font-weight:bold; 
+    background:#FFD966; 
+    color:#fff; 
+    border:dotted 1px #a8d8eb;
+}
+
+#menu ul li ul.menuDrpDwn li.selected {
+    background:#ddecf3; 
+    font-weight:bold; 
+    -moz-box-shadow:none; 
+    -webkit-box-shadow:none;
+    box-shadow:none;
+}
+
+#menu ul li ul.menuDrpDwn li.selected > a{ 
+    color:#333333; 
+    font-weight:bold; 
+    border:dotted 1px #a8d8eb;
+}
+
+#menu ul li ul.menuDrpDwn ul { 
+    position:absolute; 
+    left:100%; 
+    top:0px;
+}/* -------------------------------------Fin Estilo de la barra de menu---------------------------------------------------- */
+
+table, td, th {
+    border: 1px solid black;
+}
+      
+.error{
+    color: #E13300;
+    font-size: 0.8em;
+}
+
+.titulos_formularios{
+    text-align: center;
+    font-size:1.2em;
+    color: black;
+    font-weight:bold;
+    /*border: solid 1px;*/
+}
+
+/* -------------------------------------Estilos de los campos ---------------------------------------------------- */
+input[type=text],input[type=password],input[type=file], select{
+        font-family: Tahoma;
+        width: auto;
+	padding:4px;
+	background:#EAFFDF;
+	border:1px solid #2D7733;
+	margin-bottom:4px;
+	color:#000000;
+	font-size:0.9em;
+	border-radius: 4px;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;	
+}
+
+input[type=text]:focus,input[type=file]:focus,textarea:focus, select:focus, input[type=password]:focus{
+	border:1px solid #359532;
+	background:#9BFF97;
+        font-family: Tahoma;
+}
+
+#form input[type=file] {
+	width:auto;
+	-moz-width:auto;
+        font-family: Tahoma;
+}
+
+select{
+	cursor:pointer;
+}
+
+textarea{
+    /*width: 50%;*/
+    padding:4px;
+    background:#EAFFDF;
+    border:1px solid #2D7733;
+    font-family: Tahoma;
+    margin-bottom:4px;
+    color:#000000;
+    font-size:0.9em;
+    border-radius: 4px;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+}
+
+.contenedor_inicio{
+    text-align: left;
+    margin: 20px;
+    border-style:solid;
+    border-color:#000000;
+    border-radius: 4px;
+    cursor: pointer;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    
+    box-shadow: 0 6px 12px rgba(0,0,0,.25);
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.25);
+    -moz-box-shadow: 0 6px 12px rgba(0,0,0,.25); 
+}
+
+/*Mensajes de exito, informacion y error*/
+.info, .exito, .alerta, .errores {
+       font-family:Tahoma; 
+       font-size:15px;
+       border: 1px solid;
+       margin-top: 50px;
+       margin-left: 270px;
+       padding: 15px 0px 15px 0px;
+       background-repeat: no-repeat;
+       background-position: 10px center;
+       position: relative;
+       
+       font-family: Tahoma;
+       font-weight:bold;
+       position:absolute;
+       text-align: center;
+       width:  690px;
+       border-radius: 10px 10px 10px 10px;
+        box-shadow: 0 6px 12px rgba(0,0,0,.25);
+        -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.25);
+        -moz-box-shadow: 0 6px 12px rgba(0,0,0,.25);
+}
+.info {
+       color: #00529B;
+       background-color: #BDE5F8;
+       background-image: url('../img/iconos_alertas/info.png');
+}
+.exito {
+       color: #4F8A10;
+       background-color: #DFF2BF;
+       background-image: url('../img/iconos_alertas/exito.png');
+}
+.alerta {
+       color: #9F6000;
+       background-color: #FEEFB3;
+       background-image: url('../img/iconos_alertas/alerta.png');
+}
+.errores {
+       color: #D8000C;
+       background-color: #FFBABA;
+       background-image: url('../img/iconos_alertas/error.png');
+}
+/*---Fin mensajes de alerta y error----*/
+
+.fieldset{
+	border:#5D973E ;
+	border-top:1px solid #5D973E;
+	padding:10px;
+	font-size: 1em;
+	font-weight: bold;
+	text-align:left;
+	margin-top: 25px;
+;}
+
+/*Estilo para hallar la ciudad por medio de autocomplete*/
+.ui-autocomplete-loading {
+        background: white url('../img/cargando.gif') right center no-repeat;
+}
+
+#ciudad {
+    width: 15em;
+    background:#EAFFDF;
+    border:1px solid #2D7733;
+}
+
+#banner{
+    width: 900px;
+    border:1px solid #5D973E;
+}
